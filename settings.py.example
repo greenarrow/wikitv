@@ -1,0 +1,65 @@
+DEBUG = True
+TEMPLATE_DEBUG = DEBUG
+
+# Set to the name of the folder containing this file
+BASE_NAME = "wikitv"
+
+# Set user agent used for Wikipedia scraping
+USER_AGENT = "Mozilla/5.0 (X11; U; Linux i686) Gecko/20071127 Firefox/2.0.0.11"
+
+# SMTP Config
+SMTP_SERVER = "smtp.gmail.com"
+SMTP_PORT = 587
+SMTP_USER = ""
+SMTP_PASSWORD = ""
+SECRET_KEY = 'REPLACE_WITH_RANDOM_CHARACTERS'
+
+ADMINS = (
+	# ('Your Name', 'your_email@domain.com'),
+)
+
+MANAGERS = ADMINS
+
+DATABASE_ENGINE = ''
+DATABASE_NAME = ''
+
+TEMPLATE_DIRS = (
+	''
+)
+
+TIME_ZONE = 'Europe/London'
+LANGUAGE_CODE = 'en-uk'
+
+SITE_ID = 1
+USE_I18N = True
+
+MEDIA_ROOT = ''
+MEDIA_URL = ''
+ADMIN_MEDIA_PREFIX = '/media/'
+
+TEMPLATE_LOADERS = (
+	'django.template.loaders.filesystem.load_template_source',
+	'django.template.loaders.app_directories.load_template_source',
+)
+
+MIDDLEWARE_CLASSES = (
+	'django.middleware.common.CommonMiddleware',
+	'django.contrib.sessions.middleware.SessionMiddleware',
+	'django.contrib.auth.middleware.AuthenticationMiddleware',
+)
+
+ROOT_URLCONF = BASE_NAME+ '.urls'
+
+INSTALLED_APPS = (
+	'django.contrib.auth',
+	'django.contrib.contenttypes',
+	'django.contrib.sessions',
+	'django.contrib.sites',
+	'django.contrib.admin',
+	'django.contrib.admindocs',
+	BASE_NAME + '.backend',
+	BASE_NAME + '.browse',
+)
+
+
+

@@ -1,0 +1,12 @@
+<html>
+	<body>
+		{% for show in shows %}
+		<h3>{{ show.title }}</h3>
+		<ul>
+		{% for episode in show.episode_set.all %}
+			<li>S{{ episode.series }}.E{{ episode.series_index }} - {{ episode.title }} {{ episode.prettyDate }}</li>
+		{% endfor %}
+		</ul>
+		{% endfor %}
+	</body>
+</html>
